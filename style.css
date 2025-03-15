@@ -1,0 +1,51 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+canvas {
+    border: 2px solid #000000;
+}
+
+.tools {
+    margin-top: 20px;
+}
+
+input {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Load custom fonts */
+
+@font-face {
+    font-family: 'swiss-911';
+    src: url('swiss911/swiss911.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'long-tall-sally';
+    src: url('long-tall-sally/LongTall.ttf') format('truetype');
+}
