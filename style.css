@@ -1,3 +1,16 @@
+/* Load custom fonts */
+
+@font-face {
+    font-family: 'swiss-911';
+    src: url('swiss911.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'long-tall-sally';
+    src: url('LongTall.ttf') format('truetype');
+}
+
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -36,16 +49,4 @@ input {
     cursor: pointer;
     margin: 10px;
     font-size: 16px;
-}
-
-/* Load custom fonts */
-
-@font-face {
-    font-family: 'swiss-911';
-    src: url('swiss911.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'long-tall-sally';
-    src: url('LongTall.ttf') format('truetype');
 }
