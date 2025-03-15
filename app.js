@@ -22,26 +22,20 @@ function drawCanvas() {
     ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    const text = document.getElementById('textInput').value.toUpperCase(); // Get the text from the input field uppercase
+    // Get the text from the input field uppercase
+    const text = document.getElementById('textInput').value.toUpperCase();
+
 
     // Draw background text with long-tall-sally font
     const back_scale = 3.5; // Scale factor for the font size background text
     const text1size = canvas.width / back_scale;
 
     ctx.font = (text1size | 0) + "px bold long-tall-sally";
-    const textX1 = 40; // 40px padding from the left edge
+    // At least 40px padding from the left edge
+    const textX1 = Math.max(40, canvas.width / 2 - ctx.measureText(text).width / 2);
+    const textWidth1 = Math.min(ctx.measureText(text).width, canvas.width - textX1 * 2);
     const textY = canvas.height / 2 + text1size / 4;
     ctx.fillStyle = '#000'; // Black text
-
-    const char_positions = []
-    let curr_x = textX1;
-
-    for (let i = 0; i < text.length; i++) {
-        char_positions.push(curr_x);
-        const char = text[i];
-        const charWidth = ctx.measureText(char).width;
-        curr_x += charWidth;
-    }
 
     ctx.fillText(text, textX1, textY, canvas.width - textX1 * 2);
 
@@ -50,7 +44,8 @@ function drawCanvas() {
     const text2size = canvas.width / front_scale;
     ctx.font = (text2size | 0) + "px swiss-911";
     const textWidth2 = ctx.measureText(text).width;
-    const scaleX = (canvas.width - textX1 * 2) / textWidth2; // Scale factor for the text width
+    // Scale factor for the text width
+    const scaleX = (textWidth1 / textWidth2);
     const textY2 = textY - text2size / 2;
     ctx.save(); // Save the current state
     ctx.scale(scaleX, 1); // Scale the text horizontally
