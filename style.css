@@ -42,10 +42,10 @@ input {
 
 @font-face {
     font-family: 'swiss-911';
-    src: url('swiss911/swiss911.ttf') format('truetype');
+    src: url('swiss911.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'long-tall-sally';
-    src: url('long-tall-sally/LongTall.ttf') format('truetype');
+    src: url('LongTall.ttf') format('truetype');
 }
